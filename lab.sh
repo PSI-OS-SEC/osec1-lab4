@@ -3,9 +3,7 @@
 
 
 
-echo "Para poder calificar esta seccción deberá poder ejecutar este script desde su Estación de Trabajo, esto es parte de la nota"
-echo "Si esta en Windows.  Habilite un WSL"
-echo "Si no desea o puede instalar WSL, puede utilizar otra VM para este caso"
+echo "Clone y ejecute este script desde una de sus VMs"
 
 function grade() {
  COMMAND=$1
