@@ -4,7 +4,7 @@ OPTS='--max-time 10'
 
 CONFIG_FILE=config
 
-souce ${CONFIG_FILE}
+source ${CONFIG_FILE}
 echo "Clone y ejecute este script desde una de sus VMs"
 
 function grade() {
