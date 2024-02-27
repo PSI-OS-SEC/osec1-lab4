@@ -5,7 +5,8 @@ OPTS='--max-time 10'
 CONFIG_FILE=config
 
 source ${CONFIG_FILE}
-echo "Clone y ejecute este script desde una de sus VMs"
+
+echo "Clone y ejecute este script desde UBUNTU"
 
 function grade() {
  COMMAND=$1
