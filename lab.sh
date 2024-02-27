@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+OPTS='--max-time 10'
 
 
 echo "Clone y ejecute este script desde una de sus VMs"
@@ -36,18 +36,21 @@ grade "ssh -l ${USER} ${RHEL} hostname"
 
 echo "Validar acceso a Web Server - Ubuntu "
 
-grade "curl http://${UBUNTU}"
+grade "curl $OPTS http://${UBUNTU}"
 
 echo "Validar acceso a Web Server - Red Hat "
 
-grade "curl http://${RHEL}"
+grade "curl $OPTS http://${RHEL}"
 
 echo "REALICE LOS CAMBIOS NECESARIO EN RHEL Y ACTIVE DE FORMA PERMANENTE EL ACCESO A PUERTO 80/443 (EN OTRA TERMINAL)"
 read -p "PRESIONE ENTER, CUANDO ESTE LISTO"
 
 echo "Validar acceso a Web Server - Red Hat "
 
-grade "curl http://${RHEL}"
+grade "curl $OPTS http://${RHEL}"
+
+
+
 
 
 
