@@ -2,7 +2,9 @@
 
 OPTS='--max-time 10'
 
+CONFIG_FILE=config
 
+souce ${CONFIG_FILE}
 echo "Clone y ejecute este script desde una de sus VMs"
 
 function grade() {
@@ -17,8 +19,6 @@ function grade() {
 }
 
 
-UBUNTU="192.168.223.153" 
-RHEL="192.168.223.153"
 
 echo "Este usuario se utilizará para ambos sistemas"
 
@@ -41,6 +41,8 @@ grade "curl $OPTS http://${UBUNTU}"
 echo "Validar acceso a Web Server - Red Hat "
 
 grade "curl $OPTS http://${RHEL}"
+
+
 
 echo "REALICE LOS CAMBIOS NECESARIO EN RHEL Y ACTIVE DE FORMA PERMANENTE EL ACCESO A PUERTO 80/443 (EN OTRA TERMINAL)"
 read -p "PRESIONE ENTER, CUANDO ESTE LISTO"
